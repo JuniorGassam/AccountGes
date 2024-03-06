@@ -1,9 +1,8 @@
 class Utilisateur:
 
-    def __init__(self,prenom,nom,compte):
+    def __init__(self,prenom,nom):
         self.prenom= prenom
         self.nom= nom
-        self.compte = compte
 
 
     def getPrenom(self):
@@ -12,7 +11,3 @@ class Utilisateur:
 
     def getNom(self):
         return self.nom
-
-
-    def getCompte(self):
-        return self.compte

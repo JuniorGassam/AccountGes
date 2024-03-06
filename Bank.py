@@ -1,9 +1,3 @@
 class Bank:
-    def __init__(self, name, balance):
+    def __init__(self, name):
         self.name = name
-        self.balance = balance
-
-    def transfer(self):
-        self.balance = self.balance
-        return self.balance
-    def

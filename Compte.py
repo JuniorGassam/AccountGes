@@ -1,5 +1,40 @@
 class Compte(object):
-    def __init__(self,balance, utilisateur, bank):
-        self.utilisateur =
-        self.bank =
-        self.balance = balance
+    def __init__(self, utilisateur, bank):
+        self.utilisateur = utilisateur
+        self.bank = bank
+        self.balance = 0
+
+    def getBalance(self):
+        return self.balance
+    def getutilisateur(self):
+        return self.utilisateur
+    def getbank(self):
+        return self.bank
+    def getInfos(self):
+        print(self.utilisateur,self.bank,self.balance)
+
+    def retrait(self,montant):
+        if(self.balance < montant):
+            print('erreur votre solde est trop faible par rapport au montant demandé')
+            return False
+        else:
+            self.balance -= montant
+            return True
+
+    def depot(self,montant):
+        self.balance += montant
+        return True
+
+    def virement(self,montant,compteDestinataire):
+        if (self.balance < montant):
+            print('erreur votre solde est trop faible par rapport au montant demandé')
+            return False
+        else:
+            self.balance -= montant
+            verif = compteDestinataire.ajouterArgent(montant)
+            return verif
+
+    def ajouterArgent(self,montant):
+        self.balance += montant
+        return True
+
