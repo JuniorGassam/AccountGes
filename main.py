@@ -1,8 +1,5 @@
 from Bank import Bank
-from Compte import Compte
 from Utilisateur import Utilisateur
-from CompteCourant import CompteCourant
-from CompteEpargne import CompteEpargne
 
 if __name__ == '__main__':
 

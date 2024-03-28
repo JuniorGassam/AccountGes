@@ -14,7 +14,7 @@ class Compte(object):
         return self.bank
     def getInfos(self):
         print(self.utilisateur.getNom(),self.balance)
-        return True
+        return "\r"
 
     def retrait(self,montant):
         if(self.balance < montant):
